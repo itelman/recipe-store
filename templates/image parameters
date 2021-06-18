@@ -1,0 +1,26 @@
+{headline}:
+<a href="">
+  <img src="" alt="" width="100%" height="100%">
+</a>
+
+https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg
+https://i.imgur.com/UNBH2l2.png
+
+{cuisines}:
+<a href="">
+  <img class="round" src="" alt="" width="140" height="140">
+</a>
+
+{featurettes}:
+width="500" height="500"
+
+{American}: https://www.themealdb.com/images/media/meals/sbx7n71587673021.jpg; Chick-Fil-A Sandwich
+{British}: https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg; Bakewell tart
+{Canadian}: https://www.themealdb.com/images/media/meals/vwuprt1511813703.jpg; Nanaimo Bars
+
+
+[album]:
+<a href="">
+  <img src= alt= width="100%" height="225">
+</a>
+

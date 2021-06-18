@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>{{title1}} | Recipes Store</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/static/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .round {
+        border-radius: 50%;
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="/static/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home">Recipes Store</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/recipes">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="/recipes/todaysmeal/{{dishid}}">
+          <img src={{image}} alt={dish}} width="100%" height="95%">
+        </a>
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Meal of The Day</h1>
+            <p>Check out the recipe for <b>{{dish}}</b>, the dish that is honorably mentioned today.</p>
+            <p><a class="btn btn-lg btn-primary" href="/recipes/todaysmeal/{{dishid}}">Learn More</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <a href="/about">
+          <img src=https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg alt="Apple Frangipan Tart" width="100%" height="95%">
+        </a>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>About the website</h1>
+            <p>Press the button below if you wish to have more information about our site.</p>
+            <p><a class="btn btn-lg btn-primary" href="/about">Learn More</a></p>
+          </div>
+        </div>
+      </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <a href="/recipes/American">
+          <img class="round" src="https://www.themealdb.com/images/media/meals/sbx7n71587673021.jpg" alt="Chick-Fil-A Sandwich" width="140" height="140">
+        </a>
+
+        <h2>American</h2>
+        <p>Please press the button below in order to see some of the meals of the exquisite American cuisine!</p>
+        <p><a class="btn btn-secondary" href="/recipes/American">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <a href="/recipes/British">
+          <img class="round" src="https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg" alt="Bakewell tart" width="140" height="140">
+        </a>
+
+        <h2>British</h2>
+        <p>Please press the button below in order to see some of the meals of the exquisite British cuisine!</p>
+        <p><a class="btn btn-secondary" href="/recipes/British">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <a href="/recipes/Canadian">
+          <img class="round" src="https://www.themealdb.com/images/media/meals/vwuprt1511813703.jpg" alt="Nanaimo Bars" width="140" height="140">
+        </a>
+
+        <h2>Canadian</h2>
+        <p>Please press the button below in order to see some of the meals of the exquisite Canadian cuisine!</p>
+        <p><a class="btn btn-secondary" href="/recipes/Canadian">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Chick-Fil-A Sandwich</h2><br>
+        <p class="lead">
+          Wrap the chicken loosely between plastic wrap and pound gently with the flat side of a meat tenderizer until about 1/2 inch thick all around.\r\nCut into two pieces, as even as possible.\r\nMarinate in the pickle juice for 30 minutes to one hour (add a teaspoon of Tabasco sauce now for a spicy sandwich).\r\nBeat the egg with the milk in a bowl.\r\nCombine the flour, sugar, and spices in another bowl.\r\nDip the chicken pieces each into the egg on both sides, then coat in flour on both sides.\r\nHeat the oil in a skillet (1/2 inch deep) to about 345-350.\r\nFry each cutlet for 2 minutes on each side, or until golden and cooked through.\r\nBlot on paper and serve on toasted buns with pickle slices.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://www.themealdb.com/images/media/meals/sbx7n71587673021.jpg" alt="Chick-Fil-A Sandwich" width="500" height="500">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Bakewell tart</h2><br>
+        <p class="lead">
+          To make the pastry, measure the flour into a bowl and rub in the butter with your fingertips until the mixture resembles fine breadcrumbs. Add the water, mixing to form a soft dough.\r\nRoll out the dough on a lightly floured work surface and use to line a 20cm/8in flan tin. Leave in the fridge to chill for 30 minutes.\r\nPreheat the oven to 200C/400F/Gas 6 (180C fan).\r\nLine the pastry case with foil and fill with baking beans. Bake blind for about 15 minutes, then remove the beans and foil and cook for a further five minutes to dry out the base.\r\nFor the filing, spread the base of the flan generously with raspberry jam.\r\nMelt the butter in a pan, take off the heat and then stir in the sugar. Add ground almonds, egg and almond extract. Pour into the flan tin and sprinkle over the flaked almonds.\r\nBake for about 35 minutes. If the almonds seem to be browning too quickly, cover the tart loosely with foil to prevent them burning.
+        </p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg" alt="Bakewell tart" width="500" height="500">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Nanaimo Bars</h2><br>
+        <p class="lead">
+          Start by making the biscuit base. In a bowl, over a pan of simmering water, melt the butter with the sugar and cocoa powder, stirring occasionally until smooth. Whisk in the egg for 2 to 3 mins until the mixture has thickened. Remove from heat and mix in the biscuit crumbs, coconut and almonds if using, then press into the base of a lined 20cm square tin. Chill for 10 mins.\r\nFor the middle layer, make the custard icing; whisk together the butter, cream and custard powder until light and fluffy, then gradually add the icing sugar until fully incorporated. Spread over the bottom layer and chill in the fridge for at least 10 mins until the custard is no longer soft.\r\nMelt the chocolate and butter together in the microwave, then spread over the chilled bars and put back in the fridge. Leave until the chocolate has fully set (about 2 hrs). Take the mixture out of the tin and slice into squares to serve.
+        </p>
+      </div>
+      <div class="col-md-5">
+        <img src="https://www.themealdb.com/images/media/meals/vwuprt1511813703.jpg" alt="Nanaimo Bars" width="500" height="500">
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>(C) American Space & Maker Space Almaty. <a href="https://1001developers.com">1001Developers.com.</a></p>
+  </footer>
+</main>
+
+
+    <script src="/static/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
