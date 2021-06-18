@@ -57,18 +57,11 @@ def section(request: Request, section):
 
 @app.get("/recipes/{section}/{dish}")
 def dish(request: Request, section, dish):
-    if section == "American" or section == "British" or section == "Canadian":
-        l = requests.get("https://www.themealdb.com/api/json/v1/1/filter.php?a="+section)
-        if l.status_code == 200:
-            cuisine_db = l.json()
+    r = requests.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + dish)
+    if r.status_code == 200:
+        dish_db = r.json()
 
-        for i in range(9):
-            if dish == cuisine_db["meals"][i]["idMeal"]:
-                r = requests.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i="+dish)
-                if r.status_code == 200:
-                    dish_db = r.json()
-                return templates.TemplateResponse("/cover/dish.html", {"request": request, "title1": dish_db["meals"][0]["strMeal"]+" - Recipes", "title2": dish_db["meals"][0]["strMeal"], "image": dish_db["meals"][0]["strMealThumb"], "info": dish_db["meals"][0]["strInstructions"]})
-            else:
-                return templates.TemplateResponse("/cover/error.html", {"request": request, "title1": "Internal Error", "title2": "Internal Error"})
+    if section == dish_db["meals"][0]["strArea"]:
+        return templates.TemplateResponse("/cover/dish.html", {"request": request, "title1": dish_db["meals"][0]["strMeal"] + " - Recipes", "title2": dish_db["meals"][0]["strMeal"], "image": dish_db["meals"][0]["strMealThumb"], "info": dish_db["meals"][0]["strInstructions"]})
     else:
         return templates.TemplateResponse("/cover/error.html", {"request": request, "title1": "Internal Error", "title2": "Internal Error"})
