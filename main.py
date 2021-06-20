@@ -13,8 +13,6 @@ def home(request: Request):
 
 @app.get("/{title}")
 def title(request: Request, title):
-
-
     if title == "home":
         return templates.TemplateResponse("/cover/home.html", {"request": request, "title1": title.capitalize(), "title2": "Welcome to Recipes Store!"})
     elif title == "recipes":
@@ -72,7 +70,7 @@ def section(request: Request, section):
 
 @app.get("/recipes/{section}/{dish}")
 def dish(request: Request, section, dish):
-    r = requests.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i=" + dish)
+    r = requests.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i="+dish)
     if r.status_code == 200:
         dish_db = r.json()
 
