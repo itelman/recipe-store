@@ -13,13 +13,32 @@ def home(request: Request):
 
 @app.get("/{title}")
 def title(request: Request, title):
+
+
     if title == "home":
         return templates.TemplateResponse("/cover/home.html", {"request": request, "title1": title.capitalize(), "title2": "Welcome to Recipes Store!"})
     elif title == "recipes":
         r = requests.get("https://www.themealdb.com/api/json/v1/1/random.php")
         if r.status_code == 200:
             dish = r.json()
-        return templates.TemplateResponse("/carousel/index.html", {"request": request, "title1": title.capitalize(), "title2": title.capitalize(), "dish": dish["meals"][0]["strMeal"], "dishid": dish["meals"][0]["idMeal"], "image": dish["meals"][0]["strMealThumb"]})
+
+        cs = requests.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i=53016")
+        if cs.status_code == 200:
+            chi = cs.json()
+
+        bt = requests.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52767")
+        if bt.status_code == 200:
+            bak = bt.json()
+
+        nb = requests.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i=52924")
+        if nb.status_code == 200:
+            nan = nb.json()
+
+        return templates.TemplateResponse("/carousel/index.html", {"request": request, "title1": title.capitalize(), "title2": title.capitalize(),
+                                                                   "dish": dish["meals"][0]["strMeal"], "dishid": dish["meals"][0]["idMeal"], "image": dish["meals"][0]["strMealThumb"],
+                                                                   "dish1name": chi["meals"][0]["strMeal"], "dish1image": chi["meals"][0]["strMealThumb"], "dish1info": chi["meals"][0]["strInstructions"],
+                                                                   "dish2name": bak["meals"][0]["strMeal"], "dish2image": bak["meals"][0]["strMealThumb"], "dish2info": bak["meals"][0]["strInstructions"],
+                                                                   "dish3name": nan["meals"][0]["strMeal"], "dish3image": nan["meals"][0]["strMealThumb"], "dish3info": nan["meals"][0]["strInstructions"]})
     elif title == "about":
         return templates.TemplateResponse("/cover/about.html", {"request": request, "title1": title.capitalize(), "title2": title.capitalize()})
     else:
@@ -30,11 +49,7 @@ def random(request: Request, random):
     r = requests.get("https://www.themealdb.com/api/json/v1/1/lookup.php?i="+random)
     if r.status_code == 200:
         dish = r.json()
-
-    if random == dish["meals"][0]["idMeal"]:
-        return templates.TemplateResponse("/cover/dish.html", {"request": request, "title1": dish["meals"][0]["strMeal"] + " - Recipes", "title2": dish["meals"][0]["strMeal"], "image": dish["meals"][0]["strMealThumb"], "info": dish["meals"][0]["strInstructions"]})
-    else:
-        return templates.TemplateResponse("/cover/error.html", {"request": request, "title1": "Internal Error", "title2": "Internal Error"})
+    return templates.TemplateResponse("/cover/dish.html", {"request": request, "title1": dish["meals"][0]["strMeal"] + " - Recipes", "title2": dish["meals"][0]["strMeal"], "image": dish["meals"][0]["strMealThumb"], "info": dish["meals"][0]["strInstructions"]})
 
 @app.get("/recipes/{section}")
 def section(request: Request, section):
