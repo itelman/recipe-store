@@ -1,19 +1,18 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.83.1">
-    <title>{{title1}} | Recipes Store</title>
+    <title>{{title}} | Recipe Store</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
 
-    
 
     <!-- Bootstrap core CSS -->
-<link href="/static/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -34,186 +33,195 @@
         border-radius: 50%;
       }
 
+
+
     </style>
 
-    
+
     <!-- Custom styles for this template -->
     <link href="/static/carousel.css" rel="stylesheet">
-  </head>
-  <body>
-    
+</head>
+<body>
+
 <header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/home">Recipes Store</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/recipes">Recipes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Recipe Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/recipes">Recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </header>
 
 <main>
 
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <a href="/recipes/todaysmeal/{{dishid}}">
-          <img src={{image}} alt={dish}} width="100%" height="95%" style="width: 100%; height: 95%; object-fit: cover;">
-        </a>
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Meal of The Day</h1>
-            <p>Check out the recipe for <b>{{dish}}</b>, the dish that is honorably mentioned today.</p>
-            <p><a class="btn btn-lg btn-primary" href="/recipes/todaysmeal/{{dishid}}">Learn More</a></p>
-          </div>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
         </div>
-      </div>
-      <div class="carousel-item">
-        <a href="/about">
-          <img src=https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg alt="Apple Frangipan Tart" width="100%" height="95%" style="width: 100%; height: 95%; object-fit: cover;">
-        </a>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="/recipes/today-meal/{{rand_id}}">
+                    <img src={{rand_image}} alt={rand}} width="100%" height="100%"
+                         style="width: 100%; height: 95%; object-fit: cover;">
+                </a>
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Meal of The Day</h1>
+                        <p>Check out the recipe for <b>{{rand}}</b>, the dish that is honorably mentioned today.</p>
+                        <p><a class="btn btn-lg btn-primary" href="/recipes/today-meal/{{rand_id}}">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <a href="/about">
+                    <img src=https://www.themealdb.com/images/media/meals/wxywrq1468235067.jpg
+                         alt="Apple Frangipan Tart" width="100%" height="100%"
+                         style="width: 100%; height: 95%; object-fit: cover;">
+                </a>
 
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>About the website</h1>
-            <p>Press the button below if you wish to have more information about our site.</p>
-            <p><a class="btn btn-lg btn-primary" href="/about">Learn More</a></p>
-          </div>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>About the website</h1>
+                        <p>Press the button below if you wish to have more information about our site.</p>
+                        <p><a class="btn btn-lg btn-primary" href="/about">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-
-
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <a href="/recipes/American">
-          <img class="round" src={{dish1image}} alt={{dish1name}} width="140" height="140">
-        </a>
-
-        <h2>American</h2>
-        <p>Please press the button below in order to see some of the meals of the exquisite American cuisine!</p>
-        <p><a class="btn btn-secondary" href="/recipes/American">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <a href="/recipes/British">
-          <img class="round" src={{dish2image}} alt={{dish2name}} width="140" height="140">
-        </a>
-
-        <h2>British</h2>
-        <p>Please press the button below in order to see some of the meals of the exquisite British cuisine!</p>
-        <p><a class="btn btn-secondary" href="/recipes/British">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <a href="/recipes/Canadian">
-          <img class="round" src={{dish3image}} alt={{dish3name}} width="140" height="140">
-        </a>
-
-        <h2>Canadian</h2>
-        <p>Please press the button below in order to see some of the meals of the exquisite Canadian cuisine!</p>
-        <p><a class="btn btn-secondary" href="/recipes/Canadian">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">{{dish1name}}</h2><br>
-        <p class="lead">
-          {{dish1info}}
-        </p>
-      </div>
-      <div class="col-md-5">
-        <img src={{dish1image}} alt={{dish1name}} width="500" height="500">
-
-      </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
-    <hr class="featurette-divider">
 
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">{{dish2name}}</h2><br>
-        <p class="lead">
-          {{dish2info}}
-        </p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img src={{dish2image}} alt={{dish2name}} width="500" height="500">
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      </div>
-    </div>
+    <div class="container marketing">
 
-    <hr class="featurette-divider">
+            <!-- Three columns of text below the carousel -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <a href="/recipes/American">
+                        <img class="round" src="https://www.themealdb.com/images/media/meals/sbx7n71587673021.jpg" alt="Chick-Fil-A Sandwich" width="140" height="140">
+                    </a>
 
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">{{dish3name}}</h2><br>
-        <p class="lead">
-          {{dish3info}}
-        </p>
-      </div>
-      <div class="col-md-5">
-        <img src={{dish3image}} alt={{dish3name}} width="500" height="500">
+                    <h2>American</h2>
+                    <p>Please press the button below in order to see some of the meals of the exquisite American
+                        cuisine!</p>
+                    <p><a class="btn btn-secondary" href="/recipes/American">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <a href="/recipes/British">
+                        <img class="round" src="https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg" alt="Bakewell tart" width="140" height="140">
+                    </a>
 
-      </div>
-    </div>
+                    <h2>British</h2>
+                    <p>Please press the button below in order to see some of the meals of the exquisite British
+                        cuisine!</p>
+                    <p><a class="btn btn-secondary" href="/recipes/British">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4">
+                    <a href="/recipes/Canadian">
+                        <img class="round" src="https://www.themealdb.com/images/media/meals/vwuprt1511813703.jpg" alt="Nanaimo Bars" width="140" height="140">
+                    </a>
 
-    <hr class="featurette-divider">
+                    <h2>Canadian</h2>
+                    <p>Please press the button below in order to see some of the meals of the exquisite Canadian
+                        cuisine!</p>
+                    <p><a class="btn btn-secondary" href="/recipes/Canadian">View details &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
 
-    <!-- /END THE FEATURETTES -->
 
-  </div><!-- /.container -->
+            <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Chick-Fil-A Sandwich</h2><br>
+                    <p class="lead">
+                        {{dish1info}}
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://www.themealdb.com/images/media/meals/sbx7n71587673021.jpg" alt="Chick-Fil-A Sandwich" width="500" height="500">
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7 order-md-2">
+                    <h2 class="featurette-heading">Bakewell tart</h2><br>
+                    <p class="lead">
+                        {{dish2info}}
+                    </p>
+                </div>
+                <div class="col-md-5 order-md-1">
+                    <img src="https://www.themealdb.com/images/media/meals/wyrqqq1468233628.jpg" alt="Bakewell tart" width="500" height="500">
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <div class="row featurette">
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Nanaimo Bars</h2><br>
+                    <p class="lead">
+                        {{dish3info}}
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img src="https://www.themealdb.com/images/media/meals/vwuprt1511813703.jpg" alt="Nanaimo Bars" width="500" height="500">
+
+                </div>
+            </div>
+
+            <hr class="featurette-divider">
+
+            <!-- /END THE FEATURETTES -->
+
+        </div><!-- /.container -->
 
 
-  <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>(C) American Space & Maker Space Almaty. <a href="https://1001developers.com">1001Developers.com.</a></p>
-  </footer>
+    <!-- FOOTER -->
+    <footer class="container">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>(C) American Space & Maker Space Almaty. <a href="https://1001developers.com">1001Developers.com.</a></p>
+    </footer>
 </main>
 
 
-    <script src="/static/bootstrap.bundle.min.js"></script>
+<script src="/static/bootstrap.bundle.min.js"></script>
 
-      
-  </body>
+
+</body>
 </html>
